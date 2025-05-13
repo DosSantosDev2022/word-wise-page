@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(233, 35%, 15%);
+  --primary: hsl(241, 62%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-hover:hsl(241, 62%, 55%);
+  --secondary: hsl(17, 100%, 97%);
+  --secondary-foreground: hsl(233, 35%, 15%);
+  --secondary-hover: hsl(17, 100%, 92%);
+  --muted: hsl(240, 44%, 94%);
+  --muted-foreground: hsl(233, 35%, 25%);
+  --muted-hover:hsl(240, 44%, 84%);
+  --accent: hsl(240, 44%, 94%);
+  --accent-foreground: hsl(233, 35%, 25%);
+  --accent-hover:hsl(240, 44%, 84%);
+
+  --danger: hsl(0, 84.2%, 60.2%);
+  --danger-hover: hsl(0, 74.2%, 50.2%);
+  --danger-foreground: hsl(0, 0%, 98%);
+  --warning: hsl(43, 74%, 66%);
+  --warning-hover: hsl(43, 64%, 56%);
+  --warning-foreground: hsl(30, 80%, 20%);
+  --success: hsl(173, 58%, 39%);
+  --success-hover: hsl(173, 48%, 29%);
+  --success-foreground: hsl(0, 0%, 98%);
+
+  --border:hsl(17, 100%, 97%);
+  --input:hsl(240, 44%, 94%);
+  --ring: hsl(233, 35%, 25%);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-hover: var(--muted-hover);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-warning: var(--warning);
+  --color-warning-hover: var(--warning-hover);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-success-hover: var(--success-hover);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
