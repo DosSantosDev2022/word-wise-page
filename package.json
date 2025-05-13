@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev",
+		"build": "build",
+		"dev": "next dev",
 		"format": "npx @biomejs/biome format --write ./src ",
 		"lint": "npx @biomejs/biome lint ./src",
 		"lint-fix": "npx @biomejs/biome lint --fix ./src",

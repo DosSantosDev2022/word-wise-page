@@ -1,3 +1,10 @@
+import { SectionHero } from '@/components/global/sections/hero'
+
 export default function Home() {
-	return <div className="">ola</div>;
+	return (
+		<>
+			{/* section hero */}
+			<SectionHero />
+		</>
+	)
 }
