@@ -23,7 +23,7 @@ export default function RootLayout({
 			<body
 				className={`${inter.className} bg-background text-foreground antialiased`}
 			>
-				<div className='p-4'>
+				<div className='lg:p-4 p-0'>
 					<Header />
 					<main>{children}</main>
 				</div>
