@@ -28,7 +28,7 @@
 
   --border:hsl(17, 100%, 97%);
   --input:hsl(240, 44%, 94%);
-  --ring: hsl(233, 35%, 25%);
+  --ring: hsl(241, 62%, 60%);
 }
 
 @theme {
@@ -58,10 +58,94 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --animate-accordion-down: accordion-down 0.4s ease-out;
+	--animate-accordion-up: accordion-up 0.4s ease-out;
+	--animate-dropdown-in: dropdown-in 0.4s ease-out;
+	--animate-dropdown-up: dropdown-up 0.4s ease-out;
+	--animate-modal-in: modal-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	--animate-modal-out: modal-out 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+	@keyframes accordion-down {
+		from {
+			height: 0;
+			opacity: 0;
+		}
+		to {
+			height: var(--accordion-content-height);
+		}
+	}
+	@keyframes accordion-up {
+		from {
+			height: var(--accordion-content-height);
+		}
+		to {
+			height: 0;
+			opacity: 0;
+		}
+	}
+	@keyframes dropdown-in {
+		from {
+			height: 0;
+			opacity: 0;
+			transform: scale(0.95);
+		}
+		to {
+			height: var(--dropdown-content-height);
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	@keyframes dropdown-up {
+		from {
+			height: var(--dropdown-content-height);
+			opacity: 1;
+			transform: scale(1);
+		}
+		to {
+			height: 0;
+			opacity: 0;
+			transform: scale(0.95);
+		}
+	}
+	@keyframes modal-in {
+		0% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	@keyframes modal-out {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+	}
 }
 
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Estilos para a barra de rolagem no modo light */
+.scrollbar-custom::-webkit-scrollbar {
+	width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+	background-color: var(--muted);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+	background-color: var(--primary);
+	border-radius: 4px;
 }

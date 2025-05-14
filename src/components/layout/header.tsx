@@ -31,12 +31,9 @@ const Header = () => {
 			<div className='flex flex-col lg:flex-row items-center justify-between'>
 				{/* Logo + Toggle Mobile */}
 				<div className='flex items-center justify-between w-full lg:w-auto'>
-					<Image
-						width={120}
-						height={120}
-						alt='logo-word-wise'
-						src={'/Logo.svg'}
-					/>
+					<span className='font-bold text-3xl'>
+						<span className='text-primary'>Word</span> Wise
+					</span>
 					<Button
 						onClick={handleOpenMenu}
 						sizes='icon'

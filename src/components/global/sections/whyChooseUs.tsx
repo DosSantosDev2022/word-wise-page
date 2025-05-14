@@ -24,37 +24,50 @@ const cardData = [
 
 const WhyChooseUs = () => {
 	return (
-		<div className='flex flex-col items-center justify-center px-3 lg:px-16 lg:py-52 py-24 space-y-7  '>
-			<div className='text-center max-w-96 p-2'>
-				<span className='text-sm text-muted-foreground/60'>
-					WHY CHOOSE US
+		<section
+			aria-labelledby='why-choose-us-heading'
+			className='px-4 md:px-8 lg:px-16 py-16 lg:py-32 bg-background text-foreground'
+		>
+			<header className='text-center max-w-2xl mx-auto mb-16'>
+				<span className='text-sm font-medium text-muted-foreground/60 uppercase tracking-wider'>
+					Why Choose Us
 				</span>
-				<h2 className='lg:text-6xl text-5xl'>Our values</h2>
-			</div>
+				<h2
+					id='why-choose-us-heading'
+					className='text-4xl lg:text-6xl mt-2'
+				>
+					Our Values
+				</h2>
+			</header>
 
-			<div className='grid lg:grid-cols-3 grid-cols-1 items-center lg:gap-32 gap-24'>
+			<div className='flex items-center justify-center flex-col lg:flex-row gap-12'>
 				{cardData.map((card, index) => (
-					<div
+					<article
 						key={index}
-						className='flex flex-col items-center text-center justify-between w-80 px-2.5 py-2 '
+						className='flex flex-col items-center text-center px-6 py-4 w-full lg:w-96 '
+						aria-labelledby={`card-title-${index}`}
 					>
 						<Image
-							alt={`icon ${card.title}`}
 							src={card.iconSrc}
+							alt={`Icon representing ${card.title}`}
 							width={80}
 							height={80}
-							quality={100}
+							className='mb-6'
+							priority
 						/>
-						<div className='space-y-4 mt-6'>
-							<h3 className='font-bold text-xl'>{card.title}</h3>
-							<p className='text-muted-foreground/60 text-base'>
-								{card.description}
-							</p>
-						</div>
-					</div>
+						<h3
+							id={`card-title-${index}`}
+							className='text-xl font-semibold mb-3'
+						>
+							{card.title}
+						</h3>
+						<p className='text-muted-foreground text-base leading-relaxed'>
+							{card.description}
+						</p>
+					</article>
 				))}
 			</div>
-		</div>
+		</section>
 	)
 }
 

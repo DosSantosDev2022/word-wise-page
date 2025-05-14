@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
 
 const inter = Inter({
 	weight: ['300', '400', '500', '600'],
@@ -21,11 +22,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${inter.className} bg-background text-foreground antialiased`}
+				className={`${inter.className} bg-background text-foreground antialiased scrollbar-custom`}
 			>
 				<div className='lg:p-4 p-0'>
 					<Header />
 					<main>{children}</main>
+					<Footer />
 				</div>
 			</body>
 		</html>
