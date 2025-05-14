@@ -18,7 +18,7 @@ const SectionHero = () => {
 				<Button>Get Starter</Button>
 			</div>
 
-			<div className='relative w-full h-[400px] lg:h-[690px]'>
+			<div className='relative lg:w-xl w-full h-[400px] lg:h-[690px]'>
 				<Image
 					alt={'estudante segurando livros'}
 					src={'/frame-01.png'}

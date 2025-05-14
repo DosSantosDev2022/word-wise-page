@@ -1,4 +1,5 @@
 import { SectionHero } from '@/components/global/sections/hero'
+import TeacherCards from '@/components/global/sections/teacherCards'
 import { WhyChooseUs } from '@/components/global/sections/whyChooseUs'
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
 			<SectionHero />
 			{/* section values */}
 			<WhyChooseUs />
+			{/* section teachers */}
+			<TeacherCards />
 		</>
 	)
 }
