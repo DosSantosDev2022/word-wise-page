@@ -40,30 +40,28 @@ const TeacherCards = () => (
 			{teacherCards.map((teacher) => (
 				<div
 					key={teacher.key}
-					className='flex flex-col w-full max-w-sm justify-between gap-8 border border-border shadow p-4 rounded-xl'
+					className='flex flex-col w-full max-w-sm items-center justify-between gap-8 border border-border shadow p-4 rounded-xl'
 				>
-					<div className='flex flex-col w-full lg:w-80 justify-between gap-8 border border-border shadow p-2'>
-						<Image
-							className='rounded-3xl'
-							alt='teacher image'
-							src={teacher.imageSrc}
-							width={300}
-							height={300}
-							quality={100}
-						/>
-						<div className='p-1'>
-							<h6 className='text-lg font-bold'>{teacher.name}</h6>
-							<div className='flex items-center gap-1'>
-								<Image
-									alt='teacher icon'
-									src={teacher.iconSrc}
-									width={36}
-									height={36}
-								/>
-								<span className='text-muted-foreground/60'>
-									{teacher.role}
-								</span>
-							</div>
+					<Image
+						className='rounded-3xl'
+						alt='teacher image'
+						src={teacher.imageSrc}
+						width={300}
+						height={300}
+						quality={100}
+					/>
+					<div className='p-4 w-full'>
+						<h6 className='text-lg font-bold'>{teacher.name}</h6>
+						<div className='flex items-center gap-1'>
+							<Image
+								alt='teacher icon'
+								src={teacher.iconSrc}
+								width={36}
+								height={36}
+							/>
+							<span className='text-muted-foreground/60'>
+								{teacher.role}
+							</span>
 						</div>
 					</div>
 				</div>
