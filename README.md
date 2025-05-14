@@ -4,4 +4,4 @@
 
 > **Descrição**: Landing page institucional responsiva com animações e design moderno, desenvolvida com Next.js e Tailwind CSS.
 
-🔗 Acesse: [word-wise-page.vercel.app](https://uidex-page.vercel.app/)
+🔗 Acesse: [word-wise-page.vercel.app](https://word-wise-page.vercel.app/)
